@@ -1,0 +1,19 @@
+.rb-default {
+    background-color: hsl(0, 0%, 100%);
+    color: black;
+    min-width: 100px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin:-1px;
+  }
+
+.rb-active {
+  background-color: rgb(71, 145, 241);
+  color: white;
+}
+
+.rb-disabled {
+    background-color: hsl(0, 0%, 95%);
+    color: rgb(121, 121, 121);
+  }
+  
