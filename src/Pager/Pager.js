@@ -18,7 +18,7 @@ const Pager = ({ numberPage=12 }) => {
           }
         }}
       >
-        <a>&lt;</a>
+        <a href="#">&lt;</a>
       </div>
 
       {[...Array(numberPage).keys()].map((pageNumber) => (
@@ -32,7 +32,7 @@ const Pager = ({ numberPage=12 }) => {
             setCurrentPage(pageNumber + 1);
           }}
         >
-          <a>{pageNumber + 1}</a>
+          <a href="#">{pageNumber + 1}</a>
         </div>
       ))}
 
@@ -48,7 +48,7 @@ const Pager = ({ numberPage=12 }) => {
           }
         }}
       >
-        <a>&gt;</a>
+        <a href="#">&gt;</a>
       </div>
     </div>
   );
