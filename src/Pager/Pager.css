@@ -1,0 +1,16 @@
+.page-number-container{
+    display:flex;
+    flex-direction: row;
+    cursor: pointer;
+}
+
+.page-number-container a{
+    padding-right: 1rem;
+    padding-left: 1rem; 
+    text-align: center;
+}
+
+.Default-page-active{
+    background-color: hotpink;
+    color:aliceblue; 
+}
