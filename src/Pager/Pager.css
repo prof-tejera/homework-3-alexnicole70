@@ -1,6 +1,7 @@
 .page-number-container{
     display:flex;
     flex-direction: row;
+    cursor: pointer;
 }
 
 .page-number-container a{
