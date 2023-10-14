@@ -1,9 +1,18 @@
+import { useState } from "react";
 import "./RadioButtons.css";
 
-const RadioButton = ({ active, disabled, children }) => {
+const RadioButton = ({ active, disabled, children, onClick }) => {
   return (
     <button
-      className={active ? "rb-default rb-active" : disabled ? "rb-default rb-disabled" : "rb-default"}
+      className={
+        active
+          ? "rb-default rb-active"
+          : disabled
+          ? "rb-default rb-disabled"
+          : "rb-default"
+      }
+
+      onClick={onClick}
     >
       {children}
     </button>
@@ -11,11 +20,28 @@ const RadioButton = ({ active, disabled, children }) => {
 };
 
 const RadioButtons = () => {
+  const buttonLabels = ["Apple", "Pear", "Orange", "Durian", "Papaya", "Avocado"];
+  
+  const disbledButton = ["Orange", "Durian"];
+
+  const [currentlyActiveButton, setCurrentlyActiveButton] = useState("Apple");
+
   return (
     <div>
-      <RadioButton active>Apple</RadioButton>
-      <RadioButton>Pear</RadioButton>
-      <RadioButton disabled>Orange</RadioButton>
+      {buttonLabels && buttonLabels.map((btnName) => (
+        <RadioButton
+          active={currentlyActiveButton === btnName}
+          disabled={disbledButton.includes(btnName)}
+          onClick={() => {
+            if (!disbledButton.includes(btnName)){
+              setCurrentlyActiveButton(btnName)
+            }
+            
+          }}
+        >
+          {btnName}
+        </RadioButton>
+      ))}
     </div>
   );
 };
